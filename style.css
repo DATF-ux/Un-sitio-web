@@ -1,0 +1,343 @@
+
+/* --- Estilos Generales y Fondo --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.Fondo {
+    background-image: url("img/Fondo.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* --- Títulos Principales --- */
+#Titulo {
+    color: rgb(255, 255, 255);
+    background-color: rgb(115, 92, 248);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    text-transform: uppercase; /* Hace que todo sea mayúsculas */
+    letter-spacing: 1px;       /* Separa un poquito las letras para que se lea mejor */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezados de Sección (Introducción, Desarrollo, Conclusión) */
+.H {
+    color: rgb(255, 255, 255);
+    background-color: rgb(132, 113, 241);
+    padding: 12px 24px;
+    width: fit-content; /* Se adapta automáticamente al tamaño del texto */
+    border-radius: 10px;
+    margin: 30px 0 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+/* --- Contenedor de Texto (Artículos) --- */
+.Cosa {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Cosa p {
+    text-align: justify;
+    color: rgb(30, 30, 30);
+    margin-bottom: 15px;
+}
+
+.Cosa h2, .Cosa h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: rgb(90, 70, 210);
+}
+
+/* --- Elementos de la Página de Desarrollo --- */
+/* Listas Ordenadas (Propuestas) */
+.Cosa ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.Cosa li {
+    margin-bottom: 15px;
+    color: rgb(30, 30, 30);
+}
+
+.Cosa li strong {
+    color: rgb(115, 92, 248);
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* Sección de Invitación de la Jornada */
+.Invitacion {
+    background-color: #f0edff;
+    border-left: 5px solid rgb(115, 92, 248);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+
+.Invitacion p {
+    color: darkslateblue !important;
+    font-weight: 500;
+}
+
+.Invitacion .Destacado {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
+/* --- Multimedia (Videos e Imágenes) --- */
+/* Galería de Imágenes de Inicio */
+.Alinear {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.Alinear a {
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(115, 92, 248, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.Alinear a:hover {
+    transform: translateY(-5px);
+    background-color: rgb(115, 92, 248);
+}
+
+.Alinear img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.Contenedor-Video {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 560px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.Contenedor-Video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contenedores de Infografía y Mundo */
+.Contenedor, .Contenedor-Imagen, .Mundo {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.Contenedor-Imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.Mundo-img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- Navegación y Botones --- */
+.Navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.Navegacion a {
+    text-decoration: none;
+}
+
+#Siguiente, #Desarrollo, #Conclusión, #Anterior, #Fotografías {
+    background-color: rgb(129, 89, 241);
+    color: rgb(255, 255, 255); 
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#Siguiente:hover, #Desarrollo:hover, #Conclusión:hover, #Anterior:hover {
+    background-color: rgb(100, 60, 220);
+}
+
+#Siguiente:active, #Desarrollo:active, #Conclusión:active, #Anterior:active {
+    transform: scale(0.98);
+}
+
+.Navegacion > a:not(button) {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    margin-right: 10px;
+}
+.contenedor-galeria {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden; /* Esconde las fotos que no están activas */
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* El riel que moverá las imágenes de lado a lado */
+.visor-imagenes {
+  display: flex;
+  width: 400%; /* 100% por cada una de las 3 imágenes */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Estilo individual de cada tarjeta interna */
+.tarjeta-clase {
+  width: 25%; 
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-clase img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.pie-foto {
+  margin: 15px 0;
+  font-family: sans-serif;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ESTILO DE LOS BOTONES */
+.bloque-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Botón "Ir al anterior" (Estilo enlace) */
+.btn-enlace {
+  color: #7b4cf2;
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Botón "Siguiente" (Estilo morado redondeado) */
+.btn-morado {
+  background-color: #7b4cf2;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(123, 76, 242, 0.3);
+  transition: background 0.2s;
+}
+
+.btn-morado:hover {
+  background-color: #6336d9;
+}
+/* Si el primer radio está seleccionado, muestra la foto 1 */
+#foto1:checked ~ .visor-imagenes {
+  transform: translateX(0%);
+}
+
+/* Si el segundo radio está seleccionado, mueve el riel para mostrar la foto 2 */
+#foto2:checked ~ .visor-imagenes {
+  transform: translateX(-25%);
+}
+
+/* Si el tercer radio está seleccionado, lo mueve para mostrar la foto 3 */
+#foto3:checked ~ .visor-imagenes {
+  transform: translateX(-50%);
+}
+/*Movimiento 4 foto*/
+#foto4:checked ~ .visor-imagenes {
+  transform: translateX(-75%);
+}
+.enlace-imagen {
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  cursor: pointer;
+  display: block;
+}
+
+/* Efecto opcional: se oscurece un poquito la foto al pasar el cursor */
+.enlace-imagen:hover img {
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
